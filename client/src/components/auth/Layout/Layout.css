@@ -1,0 +1,119 @@
+.bg-dark {
+  background: linear-gradient(145deg, #1f2328, #2b3036);
+}
+
+.bg-dark h1 {
+  letter-spacing: 0.5px;
+}
+
+.bg-dark p {
+  max-width: 420px;
+  opacity: 0.85;
+}
+
+
+/* Right column container */
+.carousel-column {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+   background: #fafafa;
+}
+
+/* Vertical carousel wrapper */
+.vertical-carousel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Images */
+.vertical-carousel img {
+  height: calc(25% - 1.5px); /* 4 images, account for gaps */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gap ONLY between images */
+.vertical-carousel img:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+/* Each carousel item is 25% height minus gaps */
+.carousel-item {
+  flex: 1; /* equal height flex children */
+  display: flex; /* to keep row content side-by-side */
+ align-items: stretch;
+  background: white;
+  overflow: hidden;
+}
+
+/* Add gap ONLY between carousel items, no gap bottom of last */
+.carousel-item:not(:last-child) {
+  border-bottom-color: #fff; /* or background color of your container */
+}
+
+/* Image styling */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Subtle zoom on hover */
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+
+.carousel-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 234, 145, 0.95),
+    rgba(207, 71, 71, 0.95)
+  );
+}
+
+.carousel-text h5 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.carousel-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.carousel-text h5::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #c59d5f; /* gold accent */
+  margin-top: 8px;
+}
+
+
+/* Description side center vertically */
+.carousel-item > div:last-child {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: #333; /* adjust text color */
+  border-color:#ccc; /* optional border for description */
+  background-color: aliceblue;
+  border-radius: 0 6px;
+}
+
+
+
